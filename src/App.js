@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css';
 import AddIndividual from './AddIndividual.js'
-import AddEvent from "./AddEvent.js"
-import ListAllIndividuals from "./ListAllIndividuals.js"
-import ListAllEventsByIndividual from "./ListAllEventsByIndividual"
+// import AddEvent from "./AddEvent.js"
+// import ListAllIndividuals from "./ListAllIndividuals.js"
+// import ListAllEventsByIndividual from "./ListAllEventsByIndividual"
 
 class App extends React.Component {
   constructor() {
@@ -13,12 +13,12 @@ class App extends React.Component {
 
     }
 
-    this.addIndividual = this.addIndividual.bind(this)
+    // this.addIndividual = this.addIndividual.bind(this)
   }
 
-  addIndividual = () => {
-    console.log('test')
-  }
+  // addIndividual = (event) => {
+  //   console.log(event)
+  // }
 
   render() {
     return (
