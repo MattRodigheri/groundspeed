@@ -36,9 +36,19 @@ class AddIndividual extends React.Component{
     render() {
         let idOutput
         if (this.state.id !== "") {
-            idOutput = <div>{this.state.id}</div>
+            idOutput = (
+                <div>
+                    <p>New User ID:</p>
+                    {this.state.id}
+                </div>
+            )
         } else {
-            idOutput = <button onClick={(event) => this.generateUserID(event)}>Add</button>
+            idOutput = (
+                <div>
+                    <p>clicking 'Add' will generate a unique user ID</p>
+                    <button onClick={(event) => this.generateUserID(event)}>Add</button>
+                </div>
+            )
         }
       return (
         <div>
@@ -49,7 +59,7 @@ class AddIndividual extends React.Component{
             <input name="dob" type="text" onChange={(event) => this.addUserData(event)}/>
             <h3>Social Security Number:</h3>
             <input name="ss" type="text" onChange={(event) => this.addUserData(event)}/>
-            <p>clicking 'Add' will generate a unique user ID</p>
+            
             {idOutput}
         </div>
       );

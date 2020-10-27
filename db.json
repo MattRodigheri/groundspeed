@@ -1,0 +1,19 @@
+{ 
+    "users": [
+        {
+            "id": "",
+            "gender": "",
+            "dob": "",
+            "ss": "",
+            "smoker": false,
+            "alergies": [],
+            "medical conditions": [],
+            "health history": {
+                "date": "",
+                "type": "",
+                "billed amt": "",
+                "covered amt": ""
+            }
+        }
+    ]
+}
