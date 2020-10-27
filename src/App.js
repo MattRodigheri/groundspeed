@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import AddIndividual from './AddIndividual.js'
 // import AddEvent from "./AddEvent.js"
-// import ListAllIndividuals from "./ListAllIndividuals.js"
+import ListAllIndividuals from "./ListAllIndividuals.js"
 // import ListAllEventsByIndividual from "./ListAllEventsByIndividual"
 
 class App extends React.Component {
@@ -23,10 +23,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <AddIndividual addIndividual={this.addIndividual}/>
-        {/* <AddEvent/>
         <ListAllIndividuals/>
-        <ListAllEventsByIndividual/> */}
+        <AddIndividual addIndividual={this.addIndividual}/>
       </div>
     );
   }
