@@ -7,7 +7,7 @@ class AddIndividual extends React.Component{
         this.state ={
             gender: "",
             dob: "",
-            ss: 0,
+            ss: "",
             id: ""
         }
 
@@ -28,10 +28,18 @@ class AddIndividual extends React.Component{
     }
 
     generateUserID() {
-        this.setState({id: Math.floor(Math.random() * (99000 - 10000 + 1) + 10000)});
+        if (this.state.gender.length > 1 && this.state.dob.length > 1 && this.state.ss.length > 1) {
+            this.setState({id: Math.floor(Math.random() * (99000 - 10000 + 1) + 10000)});
+        }
     }
 
     render() {
+        let idOutput
+        if (this.state.id !== "") {
+            idOutput = <div>{this.state.id}</div>
+        } else {
+            idOutput = <button onClick={(event) => this.generateUserID(event)}>Add</button>
+        }
       return (
         <div>
             <h1>Add Individual:</h1>
@@ -42,8 +50,7 @@ class AddIndividual extends React.Component{
             <h3>Social Security Number:</h3>
             <input name="ss" type="text" onChange={(event) => this.addUserData(event)}/>
             <p>clicking 'Add' will generate a unique user ID</p>
-            <button onClick={(event) => this.generateUserID(event)}>Add</button>
-            <div className="idOutput">{this.state.id}</div>
+            {idOutput}
         </div>
       );
     }
