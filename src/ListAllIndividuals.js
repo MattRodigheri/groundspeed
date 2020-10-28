@@ -17,18 +17,27 @@ class ListAllIndividuals extends React.Component {
         fetch("http://localhost:3001/users")
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
-            // this.setState({userData: data})
+            this.setState({userData: data})
         })
     }
 
     render() {
+        let insuredIndividuals = []
+            insuredIndividuals = this.state.userData.map((user, index) => {
+                console.log("test")
+                return (
+                    <div key={index}>
+                        <span>{user.id}</span>
+                        <span>{user.gender}</span>
+                        <span>{user.dob}</span>
+                    </div>
+                )
+            })
         return (
-
             <div>
                 <button onClick={this.getUserData}>View All Insured Individuals</button>
-                {this.state.userData}
-                </div>
+                {insuredIndividuals}
+            </div>
         )
     }
 

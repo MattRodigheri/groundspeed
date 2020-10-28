@@ -1,18 +1,33 @@
 { 
     "users": [
         {
-            "id": "",
-            "gender": "",
-            "dob": "",
-            "ss": "",
+            "id": "12345",
+            "gender": "male",
+            "dob": "1/1/11",
+            "ss": "123456789",
             "smoker": false,
-            "alergies": [],
-            "medical conditions": [],
+            "alergies": ["bugs", "pugs"],
+            "medical conditions": ["super healthy"],
             "health history": {
-                "date": "",
-                "type": "",
-                "billed amt": "",
-                "covered amt": ""
+                "date": "1/2/11",
+                "type": "bad",
+                "billed amt": "$1.00",
+                "covered amt": "$0.99"
+            }
+        },
+        {
+            "id": "54321",
+            "gender": "female",
+            "dob": "2/2/22",
+            "ss": "987654321",
+            "smoker": true,
+            "alergies": ["dinosaurs"],
+            "medical conditions": ["brain"],
+            "health history": {
+                "date": "2/3/45",
+                "type": "good",
+                "billed amt": "$10.00",
+                "covered amt": "$9.00"
             }
         }
     ]
