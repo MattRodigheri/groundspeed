@@ -15,7 +15,7 @@ class ListAllIndividuals extends React.Component {
     
     getUserData() {
         fetch("http://localhost:3001/users")
-        .then(resp => resp.json())
+        .then(response => response.json())
         .then(data => {
             this.setState({userData: data})
         })
@@ -24,7 +24,6 @@ class ListAllIndividuals extends React.Component {
     render() {
         let insuredIndividuals = []
             insuredIndividuals = this.state.userData.map((user, index) => {
-                console.log("test")
                 return (
                     <div key={index}>
                         <span>{user.id}</span>

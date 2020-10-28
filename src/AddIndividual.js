@@ -5,10 +5,19 @@ class AddIndividual extends React.Component{
         super(props)
 
         this.state ={
+            id: "",
             gender: "",
             dob: "",
             ss: "",
-            id: ""
+            smoker: "",
+            alergies: [],
+            medicalConditions: [],
+            healthHistory: {
+                date: "",
+                type: "",
+                billedAmount: "",
+                coveredAmount: ""
+            }
         }
 
         this.addUserData = this.addUserData.bind(this)
@@ -31,27 +40,27 @@ class AddIndividual extends React.Component{
         if (this.state.gender.length > 1 && this.state.dob.length > 1 && this.state.ss.length > 1) {
             this.setState({id: Math.floor(Math.random() * (99000 - 10000 + 1) + 10000)});
         }
+
+        fetch("http://localhost:3001/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+  
     }
 
     render() {
-        let idOutput
-        if (this.state.id !== "") {
-            idOutput = (
-                <div>
-                    <p>New User ID:</p>
-                    {this.state.id}
-                </div>
-            )
-        } else {
-            idOutput = (
-                <div>
-                    <p>clicking 'Add' will generate a unique user ID</p>
-                    <button onClick={(event) => this.generateUserID(event)}>Add</button>
-                </div>
-            )
-        }
       return (
-        <div>
+        <form>
             <h1>Add Individual:</h1>
             <h3>Gender:</h3>
             <input name="gender" type="text" onChange={(event) => this.addUserData(event)}/>
@@ -60,8 +69,9 @@ class AddIndividual extends React.Component{
             <h3>Social Security Number:</h3>
             <input name="ss" type="text" onChange={(event) => this.addUserData(event)}/>
             
-            {idOutput}
-        </div>
+            <p>clicking 'Add' will generate a unique user ID</p>
+            <button onClick={(event) => this.generateUserID(event)}>Add</button>
+        </form>
       );
     }
 }
