@@ -1,4 +1,5 @@
 import React from 'react'
+import ListAllEventsByIndividual from './ListAllEventsByIndividual.js'
 
 
 class AddEvent extends React.Component {
@@ -106,6 +107,7 @@ class AddEvent extends React.Component {
         <h3>Individual ID:</h3>
         <input type="text" name="idInput" onChange={(event) => {this.addUserID(event)}}/>
         <button onClick={this.getSingleUserData}>Search by ID</button>
+        <ListAllEventsByIndividual healthHistory={this.state.healthHistory}/>
         <section>
             <h3>Add Insurance Event:</h3>
                 <h5>Date</h5>
