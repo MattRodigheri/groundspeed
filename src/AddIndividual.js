@@ -10,14 +10,16 @@ class AddIndividual extends React.Component{
             dob: "",
             ss: "",
             smoker: "",
-            alergies: [],
+            allergies: [],
             medicalConditions: [],
-            healthHistory: {
-                date: "",
-                type: "",
-                billedAmount: "",
-                coveredAmount: ""
-            }
+            healthHistory: [
+                {
+                    date: "",
+                    type: "",
+                    billedAmount: "",
+                    coveredAmount: ""
+                }
+            ]
         }
 
         this.addUserData = this.addUserData.bind(this)

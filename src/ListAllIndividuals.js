@@ -19,6 +19,9 @@ class ListAllIndividuals extends React.Component {
         .then(data => {
             this.setState({userData: data})
         })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     }
 
     render() {

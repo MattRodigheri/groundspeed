@@ -3,22 +3,35 @@
     {
       "id": "12345",
       "gender": "male",
-      "dob": "1/1/11",
-      "ss": "123456789",
+      "dob": "2/2/22",
+      "ss": "987654321",
       "smoker": false,
-      "alergies": [
-        "bugs",
-        "pugs"
+      "allergies": [
+        "bugs"
       ],
       "medicalConditions": [
-        "super healthy"
+        "hoof & mouth"
       ],
-      "healthHistory": {
-        "date": "1/2/11",
-        "type": "bad",
-        "billedAmount": "$1.00",
-        "coveredAmount": "$0.99"
-      }
+      "healthHistory": [
+        {
+          "date": "1/2/34",
+          "type": "bad",
+          "billedAmount": "$1.00",
+          "coveredAmount": "$0.00"
+        },
+        {
+          "date": "",
+          "type": "",
+          "billedAmount": "",
+          "coveredAmount": ""
+        },
+        {
+          "date": "09/07/2020",
+          "type": "asfd",
+          "billedAmount": "asdf",
+          "coveredAmount": "afsd"
+        }
+      ]
     },
     {
       "id": "54321",
@@ -26,18 +39,20 @@
       "dob": "2/2/22",
       "ss": "987654321",
       "smoker": true,
-      "alergies": [
+      "allergies": [
         "dinosaurs"
       ],
       "medicalConditions": [
         "brain"
       ],
-      "healthHistory": {
-        "date": "2/3/45",
-        "type": "good",
-        "billedAmount": "$10.00",
-        "coveredAmount": "$9.00"
-      }
+      "healthHistory": [
+        {
+          "date": "2/3/45",
+          "type": "good",
+          "billedAmount": "$10.00",
+          "coveredAmount": "$9.00"
+        }
+      ]
     }
   ]
 }
