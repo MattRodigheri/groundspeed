@@ -36,7 +36,7 @@ class ListAllIndividuals extends React.Component {
                 )
             })
         return (
-            <div>
+            <div className="section">
                 <button onClick={this.getUserData}>View All Insured Individuals</button>
                 {insuredIndividuals}
             </div>

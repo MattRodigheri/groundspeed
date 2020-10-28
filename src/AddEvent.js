@@ -1,24 +1,22 @@
-import React from 'react'
-import ListAllEventsByIndividual from './ListAllEventsByIndividual.js'
-
+import React from 'react';
 
 class AddEvent extends React.Component {
   constructor() {
     super()
 
     this.state={
-        id: "",
-        gender: "",
-        dob: "",
-        ss: "",
-        smoker: "",
-        allergies: [],
-        medicalConditions: [],
-        healthHistory: [],
-        date: "",
-        type: "",
-        billedAmount: "",
-        coveredAmount: ""
+      id: "",
+      gender: "",
+      dob: "",
+      ss: "",
+      smoker: "",
+      allergies: [],
+      medicalConditions: [],
+      healthHistory: [],
+      date: "",
+      type: "",
+      billedAmount: "",
+      coveredAmount: ""
     }
     this.addUserID = this.addUserID.bind(this)
     this.getSingleUserData = this.getSingleUserData.bind(this)
@@ -26,7 +24,7 @@ class AddEvent extends React.Component {
   }
 
   addUserID(event) {
-    this.setState({id:event.target.value})
+      this.setState({id:event.target.value})
   }
 
   getSingleUserData() {
@@ -34,16 +32,19 @@ class AddEvent extends React.Component {
     .then(response => response.json())
     .then(data => {
         this.setState({
-            id: data.id,
-            gender: data.gender,
-            dob: data.dob,
-            ss: data.ss,
-            smoker: data.smoker,
-            allergies: data.allergies,
-            medicalConditions: data.medicalConditions,
-            healthHistory: data.healthHistory
+          // id: data.id,
+          gender: data.gender,
+          dob: data.dob,
+          ss: data.ss,
+          smoker: data.smoker,
+          allergies: data.allergies,
+          medicalConditions: data.medicalConditions,
+          healthHistory: data.healthHistory
         })
     })
+  .catch((error) => {
+      console.error('Error:', error);
+  });
   }
 
   addEventData(event) {
@@ -102,22 +103,30 @@ class AddEvent extends React.Component {
   }
 
   render() {
+    let userFound;
+    if (this.state.ss) {
+      userFound = "User Found, Enter Event"
+    } else {
+      userFound = ""
+    }
+    
     return (
-      <div>
-        <h3>Individual ID:</h3>
-        <input type="text" name="idInput" onChange={(event) => {this.addUserID(event)}}/>
-        <button onClick={this.getSingleUserData}>Search by ID</button>
-        <ListAllEventsByIndividual healthHistory={this.state.healthHistory}/>
+      <div className="section">
         <section>
-            <h3>Add Insurance Event:</h3>
-                <h5>Date</h5>
-                <input type="text" name="date" onChange={(event)=>this.addEventData(event)}/>
-                <h5>Type</h5>
-                <input type="text" name="type" onChange={(event)=>this.addEventData(event)}/>
-                <h5>Billed Amount</h5>
-                <input type="text" name="billedAmount" onChange={(event)=>this.addEventData(event)}/>
-                <h5>Covered Amount</h5>
-                <input type="text" name="coveredAmount" onChange={(event)=>this.addEventData(event)}/>
+          <h3>Add Insurance Event:</h3>
+          <h5>Individual ID:</h5>
+          <input type="text" name="idInput" onChange={(event) => {this.addUserID(event)}}/>
+          <button onClick={this.getSingleUserData}>Search for User</button>
+          {userFound}
+          
+          <h5>Date</h5>
+          <input type="text" name="date" onChange={(event)=>this.addEventData(event)}/>
+          <h5>Type</h5>
+          <input type="text" name="type" onChange={(event)=>this.addEventData(event)}/>
+          <h5>Billed Amount</h5>
+          <input type="text" name="billedAmount" onChange={(event)=>this.addEventData(event)}/>
+          <h5>Covered Amount</h5>
+          <input type="text" name="coveredAmount" onChange={(event)=>this.addEventData(event)}/>
         </section>
 
         <button onClick={this.addEvent}>Add Event</button>

@@ -3,23 +3,20 @@ import './App.css';
 import AddIndividual from './AddIndividual.js'
 import AddEvent from "./AddEvent.js"
 import ListAllIndividuals from "./ListAllIndividuals.js"
-// import ListAllEventsByIndividual from "./ListAllEventsByIndividual"
+import ListAllEventsByIndividual from './ListAllEventsByIndividual.js'
 
 class App extends React.Component {
   constructor() {
     super()
-
-    this.state={
-
-    }
   }
 
   render() {
     return (
       <div className="App">
         <ListAllIndividuals/>
+        <AddIndividual />
         <AddEvent />
-        <AddIndividual addIndividual={this.addIndividual}/>
+        <ListAllEventsByIndividual/>
       </div>
     );
   }

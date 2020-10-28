@@ -3,33 +3,17 @@
     {
       "id": "12345",
       "gender": "male",
-      "dob": "2/2/22",
-      "ss": "987654321",
-      "smoker": false,
-      "allergies": [
-        "bugs"
-      ],
-      "medicalConditions": [
-        "hoof & mouth"
-      ],
+      "dob": "1/2/3",
+      "ss": "5",
+      "smoker": "no",
+      "allergies": [],
+      "medicalConditions": [],
       "healthHistory": [
-        {
-          "date": "1/2/34",
-          "type": "bad",
-          "billedAmount": "$1.00",
-          "coveredAmount": "$0.00"
-        },
-        {
-          "date": "",
-          "type": "",
-          "billedAmount": "",
-          "coveredAmount": ""
-        },
         {
           "date": "09/07/2020",
           "type": "asfd",
           "billedAmount": "asdf",
-          "coveredAmount": "afsd"
+          "coveredAmount": "asdf"
         }
       ]
     },

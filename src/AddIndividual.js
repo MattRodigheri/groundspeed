@@ -62,18 +62,17 @@ class AddIndividual extends React.Component{
 
     render() {
       return (
-        <form>
-            <h1>Add Individual:</h1>
-            <h3>Gender:</h3>
+        <div className="section">
+            <h3>Add Individual:</h3>
+            <h5>Gender:</h5>
             <input name="gender" type="text" onChange={(event) => this.addUserData(event)}/>
-            <h3>Date of Birth:</h3>
+            <h5>Date of Birth:</h5>
             <input name="dob" type="text" onChange={(event) => this.addUserData(event)}/>
-            <h3>Social Security Number:</h3>
+            <h5>Social Security Number:</h5>
             <input name="ss" type="text" onChange={(event) => this.addUserData(event)}/>
             
-            <p>clicking 'Add' will generate a unique user ID</p>
-            <button onClick={(event) => this.generateUserID(event)}>Add</button>
-        </form>
+            <button onClick={(event) => this.generateUserID(event)}>Add User</button>
+        </div>
       );
     }
 }
