@@ -16,3 +16,15 @@ button {
   display: block;
   margin-top: 3vh;
 }
+
+p {
+  color: darkblue;
+}
+
+.metrics {
+  margin-top: 5vh;
+}
+
+.claims {
+  margin-bottom: -1em;
+}

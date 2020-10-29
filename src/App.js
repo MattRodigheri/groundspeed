@@ -6,9 +6,6 @@ import ListAllIndividuals from "./ListAllIndividuals.js"
 import ListAllEventsByIndividual from './ListAllEventsByIndividual.js'
 
 class App extends React.Component {
-  constructor() {
-    super()
-  }
 
   render() {
     return (

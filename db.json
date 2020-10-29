@@ -3,38 +3,44 @@
     {
       "id": "12345",
       "gender": "male",
-      "dob": "1/2/3",
-      "ss": "5",
+      "dob": "10/29/2000",
+      "ss": "947382948",
       "smoker": "no",
-      "allergies": [],
+      "allergies": [
+        "pollen"
+      ],
       "medicalConditions": [],
       "healthHistory": [
         {
-          "date": "09/07/2020",
+          "date": "02/03/1945",
           "type": "asfd",
-          "billedAmount": "asdf",
-          "coveredAmount": "asdf"
+          "billedAmount": "10.00",
+          "coveredAmount": "9.00"
         }
       ]
     },
     {
       "id": "54321",
       "gender": "female",
-      "dob": "2/2/22",
+      "dob": "02/02/2020",
       "ss": "987654321",
       "smoker": true,
-      "allergies": [
-        "dinosaurs"
-      ],
+      "allergies": [],
       "medicalConditions": [
-        "brain"
+        "heart"
       ],
       "healthHistory": [
         {
-          "date": "2/3/45",
+          "date": "02/03/1945",
           "type": "good",
-          "billedAmount": "$10.00",
-          "coveredAmount": "$9.00"
+          "billedAmount": "100.00",
+          "coveredAmount": "90.00"
+        },
+        {
+          "date": "02/03/1955",
+          "type": "bad",
+          "billedAmount": "1.00",
+          "coveredAmount": "0.99"
         }
       ]
     }
