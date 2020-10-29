@@ -6,10 +6,7 @@ class ListAllIndividuals extends React.Component {
         super()
 
         this.state = {
-            userData: [],
-            // totalCoveredAmount: ,
-            claimsPerYear: "",
-            avgAge: ""
+            userData: []
         }
 
         this.getUserData = this.getUserData.bind(this);

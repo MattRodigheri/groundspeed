@@ -32,7 +32,6 @@ class AddEvent extends React.Component {
     .then(response => response.json())
     .then(data => {
         this.setState({
-          // id: data.id,
           gender: data.gender,
           dob: data.dob,
           ss: data.ss,

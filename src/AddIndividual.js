@@ -14,7 +14,7 @@ class AddIndividual extends React.Component{
             medicalConditions: [],
             healthHistory: [
                 {
-                    date: "",
+                    date: "10/01/2020",
                     type: "",
                     billedAmount: "",
                     coveredAmount: ""
